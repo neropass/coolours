@@ -12,12 +12,14 @@ const cols = document.querySelectorAll('.col');
 function setRandomColors() {
   cols.forEach(col => {
     const text = col.querySelector('h2');
+    const button = col.querySelector('button');
     const color = chroma.random();
 
     text.textContent = color;
     col.style.background = color;
 
     setTextColor(text, color);
+    setTextColor(button, color);
   })
 }
 
