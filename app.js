@@ -9,3 +9,10 @@ function generateRandomColor() {
   return '#' + color;
 }
 
+function setRandomColors() {
+  cols.forEach(col => {
+    col.style.background = generateRandomColor()
+  })
+}
+
+setRandomColors();
